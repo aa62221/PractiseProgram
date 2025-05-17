@@ -8,11 +8,6 @@ public class Test3 {
 	
 	public static void main(String[]args) throws IOException {
 		
-		 
-	    
-	
-		
-	
 		File file = new File("C:\\\\Users\\\\Dell\\\\eclipse-workspace\\\\ABC.txt");
 		boolean fvar = file.createNewFile();
 	     if (fvar){	
@@ -22,20 +17,7 @@ public class Test3 {
 	          System.out.println("File already present at the specified location");
 	     }
 	                    	
-					
-			
-		
-	
-
-	
-		
-
-	        
-	
-		
-		
-		
 	}
-	
+	//Testing comments
 	
 }
