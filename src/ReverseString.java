@@ -34,7 +34,7 @@ public class ReverseString {
 		
 //----------Using String Buider reverse method-----------------------------------------------------------
 		
-		String str = "Akshay";
+		String str = "Akshay Aathale";
 		StringBuilder sb  = new StringBuilder(str);
 		//sb.append(str);
 		sb.reverse();
@@ -62,14 +62,14 @@ public class ReverseString {
 	    
 	    for(int i=0; i<words1.length;i++){  
 	    
-	    	String s =words[i];	    	
+	    	String s =words1[i];	    	
 	        for(int j =s.length()-1; j>=0;j--) {
 	        	reverseWord1 = reverseWord1 +s.charAt(j);   
 		        
 	        }
 	     reverseWord1+= " ";
 	    }  
-	    
+	    System.out.println("Reverse string at its own place without reverse method: ");
 	    System.out.println(reverseWord1); 
 	    
  //----------Reverse string with First letter Capital------------------------------------

@@ -19,7 +19,7 @@ public class ReadWriteFile {
 		 FileInputStream fis = new FileInputStream("C:\\Users\\Dell\\Desktop\\Study Material\\Eclipse workspace\\Practise Program\\src\\Package2\\Properties.properties");
 		 prop.load(fis);
 		 System.out.println(prop.get("username"));
-		 System.out.println(prop.get("password"));
+		 System.out.println(prop.getProperty("password"));
 		 //no tenant property is available in the file so it returns null
 		 System.out.println(prop.get("tenant"));
 		 fis.close(); 

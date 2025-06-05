@@ -146,9 +146,8 @@
   
   public static void pyramid() {
 	  
-	  int space=3;  
 	  for(int i=1;i<5;i++) {		
-		for(int j=1;j<=space;j++) {
+		for(int j=i;j<=5;j++) {
 			//Do not print "ln" as we need to give space in line
 		System.out.print(" ");
 		}
@@ -156,7 +155,6 @@
 	    for(int j=1;j<=i;j++) { 
 			 System.out.print("* ");
 		 } 
-	     space=space-1;
 		 System.out.println();
   }
 	 

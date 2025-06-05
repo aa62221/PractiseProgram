@@ -6,9 +6,13 @@ public class CustomException extends Exception{
 
 	
 	CustomException(){
-		System.out.println("My custom exception is caused");
 	}
-
+	
+	@Override
+    public String toString() {
+        return "CustomException [getMessage()=" + getMessage() + ", getCause()=" + getCause() + ", getSuppressed()="
+                + getSuppressed() + ", toString()=" + super.toString() + "]";
+    }
 		
 	public static void main(String[] args) throws CustomException   {
 		
@@ -34,7 +38,7 @@ public class CustomException extends Exception{
 	
 }
 	
-	public static void method() throws CustomException   {
+	public static void method() throws CustomException    {
 		throw new CustomException();
 	}
 	

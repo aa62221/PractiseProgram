@@ -5,8 +5,8 @@ public class FindMissingNumber {
 
 	public static void main(String[] args) {
 		
-		//Program to find the missing number from first n natural number
-		
+//		//Program to find the missing number from first n natural number
+//		
 //		int n, sumOfArray=0;
 //		Scanner scan = new Scanner(System.in);		
 //		System.out.println("Enter the number of elements in array");

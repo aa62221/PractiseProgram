@@ -6,7 +6,7 @@ import java.util.Map.Entry;
  class OccurenceOfEachElementInArray  {
 	 
 	public static void main(String[]args) {
-		int array[]= {1,2,2,3,3,3,4,4,4,4,5,5,5,5,5};
+		int array[]= {1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,6};
 		
 		HashMap<Integer,Integer> hmap = new HashMap<Integer,Integer>();
 		
@@ -24,12 +24,30 @@ import java.util.Map.Entry;
 		    }
 		 				}
 		
+		 System.out.println(hmap);
+		 
+//		 //To find the element with maximum occurrence
+//		int max=0;
+//		int key=0;
 //		for(Map.Entry<Integer,Integer> me2: hmap.entrySet())
 //		{
-//			me2.getKey();
+//			if(me2.getValue()>max) {
+//				max = me2.getValue();
+//				key = me2.getKey();
+//			}
+//		
 //		}
-		
-		 System.out.println(hmap);
+//		
+//	    System.out.println("Key with maximum occurrence: "+ key );
+	 
+		//AI generated code to find the element with maximum occurrence
+			for (Map.Entry<Integer, Integer> me : hmap.entrySet()) {
+				if (me.getValue() == Collections.max(hmap.values())) {
+					System.out.println("Element with maximum occurrence: " + me.getKey());
+				}
+			}
+			
+
 		 
 		 
 //------------------Count the occurence of each words in the string----------------------------------------------
@@ -49,7 +67,6 @@ import java.util.Map.Entry;
 			    	hmap2.put(s1, val+1);
 			    }
 			 				}
-			 
 			 
 		 System.out.println(hmap2);
 		 

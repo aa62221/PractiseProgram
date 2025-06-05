@@ -198,6 +198,11 @@ public class StringRelatedProgram {
 		Arrays.sort(str11);
         Arrays.sort(str12);
         
+//        if (Arrays.equals(str11, str12)) {
+//			System.out.println("Strings are Anagrams");
+//		} else {
+//			System.out.println("Strings are not Anagrams");
+//		}
         try {
         for(int i=0; i<n1;i++) {
         	if(str11[i]!=str12[i]){
@@ -217,14 +222,10 @@ public class StringRelatedProgram {
 //------------Count the number of words in the string----------------------------
 	
 	public static void countWords() {
-	String str1 = " Count the number of   words   in this    String";
+	String str1 = " Count the number of   words   in this    String   ";
 	int count=0;
 	
-	if(str1.charAt(0)!=' '){
-		count++;
-	}
-	
-	for( int i=0; i<str1.length(); i++) {
+	for( int i=0; i<str1.length()-1; i++) {
 		if(str1.charAt(i)==' ' && str1.charAt(i+1)!= ' ') {
 			count++;			
 		}
@@ -271,15 +272,6 @@ public class StringRelatedProgram {
 	
 	public static void numberOfCharacters() {
 		String s = "test  this    madam";
-		
-//		String[] str= s.split(" ");
-//		
-//		for( String s1: str) {
-//		char[] c = s1.toCharArray();	
-//		
-//		System.out.println(s1+ "-"+ c.length);
-//		
-//}
 		
 		char [] str= s.toCharArray();
 		for(int i=0;i<str.length;i++) {
@@ -341,7 +333,7 @@ public class StringRelatedProgram {
                  q=q+p.charAt(j);            
              }                            
          }
-         System.out.print(q);
+         System.out.print(q+ " ");
      }
   	}
 
