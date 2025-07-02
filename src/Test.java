@@ -48,6 +48,7 @@ public class Test {
 		}		
 		}
 	}	
+	
 	System.out.println(hmap);
 		
 //		  String s1 ="akshay";
@@ -71,6 +72,8 @@ public class Test {
 //		    System.out.println(hmap1);
 
 	}
+	
+	
 	
 	
 }

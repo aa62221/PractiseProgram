@@ -30,6 +30,7 @@ public class StringRelatedProgram {
 		pascalCase();
 		System.out.println();
 		System.out.println(methodToReturnSingleDigitSum("7891"));
+		pascalCase1();
 	}
 		
 //----------Find the sum of the numbers in the given string------------
@@ -42,6 +43,7 @@ public class StringRelatedProgram {
             char c = array[i];
             String temp = "";
             if (Character.isDigit(c)) {
+//            	sum+= Character.getNumericValue(c);--- You can use this method as well
                 temp += c;
                 sum+=Integer.valueOf(temp);
                // temp="";
@@ -354,6 +356,25 @@ public class StringRelatedProgram {
 			return str;
 			
 		}
+	 
+//----------Pascal case without using inbuilt function--------------
 		
+	 public static void pascalCase1(){	
+		 
+		 String s ="Selenium is easier than API Automation";
+			String[] words = s.split(" ");
+			for(int i = 0;i< words.length-1;i++) {
+			
+			String S =words[i];
+			char firstChar = S.charAt(0);
+			if (firstChar >= 'a' && firstChar <= 'z') {
+			    firstChar = (char)(firstChar - 32);
+			}
+			String result = firstChar + S.substring(1);
+			System.out.print(result+ " ");
+		}
+		 
+	 
+	 }
 }
 
