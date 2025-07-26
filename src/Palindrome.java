@@ -11,7 +11,7 @@ public class Palindrome {
 	    int quo = num;
 		while(quo>0) {
 		rem= quo % 10;
-		sum = sum * 10 + rem;
+		sum = (sum * 10) + rem;
 		quo = quo/10;
 		}
 		

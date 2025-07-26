@@ -224,9 +224,12 @@ public class StringRelatedProgram {
 //------------Count the number of words in the string----------------------------
 	
 	public static void countWords() {
-	String str1 = " Count the number of   words   in this    String   ";
+	String str1 = "Count the number of   words   in this    String   a";
+	// String[] words = str1.trim().split("\\s+"); Trim leading and trailing spaces and split by one or more spaces
 	int count=0;
-	
+	if (str1.charAt(0) != ' ') {
+		count++;
+	}
 	for( int i=0; i<str1.length()-1; i++) {
 		if(str1.charAt(i)==' ' && str1.charAt(i+1)!= ' ') {
 			count++;			
@@ -273,7 +276,7 @@ public class StringRelatedProgram {
 //---Count the number of alphabets in each word in string--------------------
 	
 	public static void numberOfCharacters() {
-		String s = "test  this    madam";
+		String s = "  test  this    madam";
 		
 		char [] str= s.toCharArray();
 		for(int i=0;i<str.length;i++) {
@@ -287,6 +290,11 @@ public class StringRelatedProgram {
 			if(s1.length()>0)
 			System.out.println(s1+ " -" +s1.length());			
 		}
+		//-------Alternative way to count number of characters in each word in string
+//		   String[] words = s.trim().split("\\s+");
+//	       for(String word:words) {
+//	    	   System.out.println(word.length());
+//	       }
 		
 	}
 	
@@ -349,7 +357,8 @@ public class StringRelatedProgram {
 				for(int i=0;i<str.length();i++) {
 					String s="";
 					s=s+str.charAt(i);				
-					sum=sum+Integer.parseInt(s);			
+					sum=sum+Integer.parseInt(s);	
+//					sum += Character.getNumericValue(str.charAt(i));
 				}
 				str=String.valueOf(sum); 		
 			}
@@ -358,12 +367,12 @@ public class StringRelatedProgram {
 		}
 	 
 //----------Pascal case without using inbuilt function--------------
-		
+//------------Also called as Title Case		
 	 public static void pascalCase1(){	
 		 
 		 String s ="Selenium is easier than API Automation";
 			String[] words = s.split(" ");
-			for(int i = 0;i< words.length-1;i++) {
+			for(int i = 0;i< words.length;i++) {
 			
 			String S =words[i];
 			char firstChar = S.charAt(0);

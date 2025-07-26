@@ -31,7 +31,7 @@ public class RemoveDuplicateFromString {
 	    
 //-------------------Printing Duplicate Characters in String--------------------------------
 	    
-	    String str = new String("Sakketat");
+	    String str = new String("Sakketate");
        // char[] chars = str.toCharArray();
         System.out.println("Duplicate characters are:");
         for (int i=0; i<str.length();i++) {

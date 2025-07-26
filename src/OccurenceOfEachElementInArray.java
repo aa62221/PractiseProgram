@@ -14,7 +14,7 @@ import java.util.Map.Entry;
 	   {
 
 			int a = array[i];
-		    Integer val = hmap.get(a);
+		    Integer val = hmap.get(a);// Autoboxing...Integer.valueOf(a);
 		    
 		    if(val== null) {
 		    	hmap.put(a, 1);
@@ -50,7 +50,7 @@ import java.util.Map.Entry;
 
 		 
 		 
-//------------------Count the occurence of each words in the string----------------------------------------------
+//------------------Count the Occurence of each words in the string----------------------------------------------
 		
 		 String s = "This is a large large large String";
 		 String str[] = s.split(" ");
