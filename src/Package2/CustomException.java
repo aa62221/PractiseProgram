@@ -38,7 +38,7 @@ public class CustomException extends Exception{
 	
 }
 	
-	public static void method() throws CustomException    {
+	public static void method() throws CustomException   {
 		throw new CustomException();
 	}
 	
