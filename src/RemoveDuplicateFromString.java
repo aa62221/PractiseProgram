@@ -12,7 +12,6 @@ public class RemoveDuplicateFromString {
 
 	// since set does not allow duplicate value we are converting string into set	
 	    Set<Character> set = new LinkedHashSet<Character>();
-	   
 	    for(char c :ch) {
 	    	set.add(c);
 	    }
@@ -31,21 +30,21 @@ public class RemoveDuplicateFromString {
 	    
 //-------------------Printing Duplicate Characters in String--------------------------------
 	    
-	    String str = new String("Sakketate");
-       // char[] chars = str.toCharArray();
-        System.out.println("Duplicate characters are:");
-        for (int i=0; i<str.length();i++) {
-                    for(int j=i+1; j<str.length();j++) {
-                    	      if(str.charAt(i)==str.charAt(j)) {
-                               //if (chars[i] == chars[j]) {
-                                         // System.out.println(chars[j]);
-                    	    	            System.out.println(str.charAt(j));
-                                          break;
-                                }
-                     }
-                   
-         }
-
+	    String str = "Sakketakte";
+	    System.out.println("Duplicate characters are:");
+	    Set<Character> duplicates = new LinkedHashSet<>();
+	    for (int i = 0; i < str.length(); i++) {
+	        for (int j = i + 1; j < str.length(); j++) {
+	            if (str.charAt(i) == str.charAt(j)) {
+	                duplicates.add(str.charAt(i));
+	                break;
+	            }
+	        }
+	    }
+	    for (char c : duplicates) {
+	        System.out.println(c);
+	    }
+	    
 	}
 
 }
