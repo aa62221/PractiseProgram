@@ -46,7 +46,6 @@ public class StringRelatedProgram {
 //            	sum+= Character.getNumericValue(c);--- You can use this method as well
                 temp += c;
                 sum+=Integer.valueOf(temp);
-               // temp="";
            }      
         }
         System.out.println(sum);
@@ -249,8 +248,7 @@ public class StringRelatedProgram {
 		HashMap<Character,Integer> hmap = new LinkedHashMap<Character, Integer>();
 		
 		for(char ch: c) {
-		Integer val= hmap.get(ch);
-		
+		Integer val= hmap.get(ch);		
 		if(val==null) {
 			hmap.put(ch, 1);
 		}
