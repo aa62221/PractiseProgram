@@ -45,7 +45,15 @@ public class InterviewQue {
         // Recursive calls for 1 step, 2 steps, and 3 steps
         return countWays(n - 1) + countWays(n - 2);
     }
-    
+//    If n = 3:
+//
+//    	countWays(3) = countWays(2) + countWays(1)
+//
+//    	countWays(2) = countWays(1) + countWays(0)
+//    	→ 1 + 1 = 2
+//
+//    	countWays(1) = countWays(0) + countWays(-1)
+//    	→ 1 + 0 = 1
 
         // Remove leading and trailing zeros from a string
      public static void removeLeadingTrailingZeros(String s) {
