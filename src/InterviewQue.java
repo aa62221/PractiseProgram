@@ -71,6 +71,18 @@ public class InterviewQue {
         String result = s.substring(start, end + 1);
         System.out.println(result);
     }
+     
+     //OR
+//     char[] c= str.toCharArray();
+//     String sb = "";
+//		for (char ch : c) {
+//			if (ch == '0') {
+//				continue;
+//			}
+//			sb= sb+ ch;
+//			
+//		}
+//		System.out.print(sb);
 
      // Method to reverse only alphabetic characters in a string
      public static String reverseString(String str) {
