@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class SteamAPIinJava {
@@ -35,10 +36,15 @@ public class SteamAPIinJava {
                  .findFirst()
                  .get();
             System.out.println(secondHighest);
+            System.out.println("-------");
             
           //Find the frequency of each character in the string  
           String input = "aabbcdeaa";
-          char[] ch = input.toCharArray() ;
+          Map<Character, Long> freqMap = input.chars()      // IntStream
+                  .mapToObj(c -> (char)c)  // convert to Character
+                  .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+
+          System.out.println(freqMap);
     	 
     }
 }
