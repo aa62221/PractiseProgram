@@ -1,46 +1,19 @@
+
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Scanner;
 
 public class Test2 {
-	
-	
 
-	public static void main(String[] args) {
-		
-		
-//		String s ="Welcome";
-//		
-//		for(int i=0; i<=s.length()-3; i++) {
-//			System.out.println(s.substring(i,i+3));
-//		}
-		
-		Scanner scan  = new Scanner(System.in);
-		int n=scan.nextInt();		
-		int m= factorial(n);
-		System.out.println(m);
-		System.out.println(System.getProperty("os.name"));
-		System.out.println(System.getProperty("user.dir"));
-		System.out.println(System.getProperty("user.home"));
-		System.out.println(System.getProperty("user.name"));
-	}	
-	   public static int factorial(int n) {
-		   		
-		  if(n>1) {
-			  return n*factorial(n-1);	
-	        }
-		  else if(n==1) {
-			  return 1;
-		  }
-		  else {
-			  return 0; 
-		  }
+    public static void main(String[] args) {
+         int array[]= {1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,6};
+		 HashMap<Integer,Integer> hmap = new HashMap<Integer,Integer>();
+		 for(int i: array) {
+			 hmap.put(i, hmap.get(i)==null?1:hmap.get(i)+1);
+		 }
+		 System.out.println(hmap);
 		 
-	   }
-	
-	  
-
+    	
+    	
+    	
+    }
 }
-	
-

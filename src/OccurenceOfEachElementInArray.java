@@ -26,6 +26,12 @@ import java.util.Map.Entry;
 		
 		 System.out.println(hmap);
 		 
+		 //Alternate way to count the occurrence of each element in the array
+//		 for(int i: array) {
+//			 hmap.put(i, hmap.get(i)==null?1:hmap.get(i)+1);
+//		 }
+//		 System.out.println(hmap);
+		 
 //		 //To find the element with maximum occurrence
 //		int max=0;
 //		int key=0;

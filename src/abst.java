@@ -16,6 +16,7 @@ public class abst {
 			System.out.println("private method");
 		}
 		
+		
 	
 }
 
