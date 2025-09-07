@@ -1,17 +1,26 @@
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Test2 {
 
     public static void main(String[] args) {
-         int array[]= {1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,6};
-		 HashMap<Integer,Integer> hmap = new HashMap<Integer,Integer>();
-		 for(int i: array) {
-			 hmap.put(i, hmap.get(i)==null?1:hmap.get(i)+1);
-		 }
-		 System.out.println(hmap);
-		 
+    	 String abc ="today is tuesday";
+    	 String[]str  = abc.split(" ");
+    	 
+    	List<String> al = new ArrayList<String>(Arrays.asList(str));
+    	Collections.reverse(al);
+    	
+		for (String s : al) {
+			char c =s.charAt(0);
+			System.out.print(Character.toUpperCase(c)+s.substring(1)+" ");
+			
+		}
+    	
+    		 
+    	 
     	
     	
     	

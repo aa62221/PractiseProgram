@@ -31,8 +31,8 @@ public class SecondHighestNumberInArray {
 //OR you can also use sort method
 
 public static void sortmethod() {
-	
-	Arrays.sort(array);
+
+	Arrays.sort(array);	
 	System.out.println(array[array.length-2]);
 		
 }
