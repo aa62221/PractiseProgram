@@ -4,6 +4,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class InterviewQue {
 
@@ -14,6 +16,8 @@ public class InterviewQue {
 		removeLeadingTrailingZeros("000123000");
 		System.out.println(reverseString("abcd$akd#p"));
 		noOfClicks();
+		leaderInteger();
+		findDate();
 	}
 	
 	//Sliding window approach
@@ -150,7 +154,58 @@ public class InterviewQue {
          System.out.println("User with maximum clicks: " + maxUser + " (" + maxClicks + " clicks)");
      
      }
+     
+     //A leader element in an array is the one that is strictly greater than all the elements to its right.
+     // By definition, the rightmost element is always a leader.
+//     Array: [16, 17, 4, 3, 5, 2]
+//    		 Start from the right: 2 → leader (rightmost).
+//    		 Next: 5 > 2 → leader.
+//    		 Next: 3 < 5 → not leader.
+//    		 Next: 4 < 5 → not leader.
+//    		 Next: 17 > 5 → leader.
+//    		 Next: 16 < 17 → not leader.
+//    		 ✅ Leaders are: [17, 5, 2]
 
+     
+         public static void leaderInteger() {
+             int[] arr = {16, 17, 4, 3, 5, 2};
+             List<Integer> leaders = new ArrayList<>();
 
-    
+             int n = arr.length;
+             int maxFromRight = arr[n - 1];  // rightmost element is always a leader
+             leaders.add(maxFromRight);
+
+             // Traverse from right to left
+             for (int i = n - 2; i >= 0; i--) {
+                 if (arr[i] > maxFromRight) {
+                     maxFromRight = arr[i];
+                     leaders.add(maxFromRight);
+                 }
+             }
+
+             // Since we added leaders in reverse order, reverse the list
+             Collections.reverse(leaders);
+
+             System.out.println("Leader elements: " + leaders);
+         }
+         
+         //Find the date from the given string and print
+          public static void findDate() {
+        	  String input ="My DOB is 09-09-1993 and Kimaya's is 21/03/1994";
+      	    String pattern = "\\d{2}[-/]\\d{2}[-/]\\d{4}";
+      	    List<String> dates = new ArrayList<>();
+      	    Pattern p = Pattern.compile(pattern);
+      	    Matcher m = p.matcher(input);
+      		while (m.find()) {
+      			dates.add(m.group());
+      		}
+      		
+      		System.out.println(dates);
+        	    
+        	    
+        	            	 
+          }
+     
+
+     
 }

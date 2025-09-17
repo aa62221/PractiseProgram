@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.Map;
 import java.util.Map.Entry;
 
 
@@ -77,6 +76,21 @@ import java.util.Map.Entry;
 			 				}
 			 
 		 System.out.println(hmap2);
+		 
+//		 String s = "This is a large large large String";
+//    	 String[] words = s.split(" ");
+//    	 HashMap<String, Integer> hmap = new HashMap<String, Integer>();
+//			for (String w : words) {
+//				hmap.put(w, hmap.get(w)==null?1:hmap.get(w)+1);
+//			}m.out.println(hmap);
+//			
+//			Syste
+//		int max= Collections.max(hmap.values());
+//		for( Map.Entry<String, Integer> me: hmap.entrySet()) {
+//			if (me.getValue() == max) {
+//				System.out.println("Word with maximum occurrence: " + me.getKey());
+//			}
+//		}
 		 
 	
 	}
