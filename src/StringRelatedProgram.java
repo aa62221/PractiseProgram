@@ -116,6 +116,7 @@ public class StringRelatedProgram {
 	  
 //	  System.out.println(s);
 //	  System.out.println(s.trim());//trim() method will only remove spaces from start and end and not in between string
+//	  String result = s.replaceAll("\\s+", "");
 	  
 	  for(int i=0;i<s.length();i++) {
 		 char c =s.charAt(i);	
