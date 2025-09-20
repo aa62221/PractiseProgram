@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 public class InterviewQue {
 
 	public static void main(String[] args) {
-		//shift all even numbers to the left and odd numbers to right
+		
 		EvenOddPartition();
 		System.out.println("Number of ways to reach top : " +countWays(3));
 		removeLeadingTrailingZeros("000123000");
@@ -18,9 +18,12 @@ public class InterviewQue {
 		noOfClicks();
 		leaderInteger();
 		findDate();
+		findPalandrome("abamk121plalp");
+		moveZeros();
 	}
 	
 	//Sliding window approach
+	//shift all even numbers to the left and odd numbers to right
 	public static void EvenOddPartition() {
 		int arr[] = {2,5,8,7,1,3,6,4,5,9};		
 		int left = 0;
@@ -40,6 +43,7 @@ public class InterviewQue {
 		}
 		System.out.println(Arrays.toString(arr));
 	}
+	
 
 	// Method to calculate the number of ways to reach the nth stair
     public static int countWays(int n) {
@@ -201,11 +205,81 @@ public class InterviewQue {
       		}
       		
       		System.out.println(dates);
-        	    
-        	    
-        	            	 
           }
-     
-
+          
+           //Find the longest palindrome substring in a given string with its length
+          public static void findPalandrome(String str) {
+      		
+      		HashMap<String, Integer> map = new HashMap<>();
+      		for( int i=0;i<str.length();i++){
+                  
+                  for( int j=i+1;j<=str.length();j++){
+                       
+                      String sb =str.substring(i,j);
+                      String rev = new StringBuilder(sb).reverse().toString();
+//                      StringBuilder rev = new StringBuilder(sb);
+//                      rev= rev.reverse();
+//                      if(sb.contentEquals(rev)) {
+//                    	  System.out.println("Palindrome substring is: " + sb);
+//                      }
+                      if(sb.equalsIgnoreCase(rev)) {
+      					map.put(sb, sb.length());
+                      }
+                  }
+      	  }
+      		
+      		int max =Collections.max(map.values());
+      		
+      		for (Map.Entry<String, Integer> entry : map.entrySet()) {
+      			if (entry.getValue() == max) {
+      				System.out.println("Longest Palindrome substring is: " + entry.getKey() + " with length: " + entry.getValue());
+      			}
+      		}
+          }
+          
+          //Program to move zeros to the end of an array
+          public static void moveZeros() {
+        	  int[] arr= {3,0,2,1,0,0,6,1,9,0};
+              int index = 0;
+              // Step 1: Move all non-zeros forward
+              for (int i = 0; i < arr.length; i++) {
+                  if (arr[i] != 0) {
+                      arr[index] = arr[i];
+                      index++;
+                  }
+              }
+              // Step 2: Fill remaining places with 0
+              // Going till arr.length as index is added for last loop above i.e 6
+              while (index < arr.length) {
+                  arr[index] = 0;
+                  index++;
+              }
+              System.out.println(Arrays.toString(arr));
+          }
+          
+        //shift all even numbers to the left and odd numbers to right while maintaining their original order
+      	 public static void EvenOddPartitionMaitainingOrder() {
+      		
+      		   int[] arr = {8, 5, 2, 4, 9, 6, 3, 1, 7};
+      	       int[] result = new int[arr.length];
+      	       int index = 0;
+      	        // Step 1: Copy evens in order
+      	        for (int num : arr) {
+      	            if (num % 2 == 0) {
+      	                result[index++] = num;
+      	            }
+      	        }
+      	        System.out.println(index);
+      	        // Step 2: Copy odds in order
+      	        for (int num : arr) {
+      	            if (num % 2 != 0) {
+      	                result[index++] = num;
+      	            }
+      	        }
+      	        System.out.println(Arrays.toString(result));
+      }
+      	 
+      	 //Note:- You have to create new array "result" here , you can't do in same array like moveZeros()
+      	 // Because array during first for loop array will change to 8,2,4,6,9,6,3,1,7 and you will loose 5 and 6 will appear twice.
      
 }
