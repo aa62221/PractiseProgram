@@ -92,6 +92,14 @@ public class ReverseString {
 	  		System.out.print(b1+" ");
 	    }
 	    System.out.println();
+	//OR    
+//	    String[] words = abc.split(" ");
+//		for (int i = words.length - 1; i >= 0; i--) {
+//			String word = words[i];
+//			char firstChar= word.charAt(0);
+//			firstChar = Character.toUpperCase(firstChar);
+//            System.out.print(firstChar + word.substring(1) + " ");				
+//		}
 	    
 	  
 //----------Reverse string without using loop------------------------------------	 

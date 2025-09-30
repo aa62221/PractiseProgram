@@ -1,18 +1,18 @@
 package Package2;
 
-import com.sun.jdi.Method;
 
 public class CustomException extends Exception{
 
 	
 	CustomException(){
+		super("This is custom exception");
 	}
 	
-	@Override
-    public String toString() {
-        return "CustomException [getMessage()=" + getMessage() + ", getCause()=" + getCause() + ", getSuppressed()="
-                + getSuppressed() + ", toString()=" + super.toString() + "]";
-    }
+//	@Override
+//    public String toString() {
+//        return "CustomException [getMessage()=" + getMessage() + ", getCause()=" + getCause() + ", getSuppressed()="
+//                + getSuppressed() + ", toString()=" + super.toString() + "]";
+//    }
 		
 	public static void main(String[] args) throws CustomException   {
 		

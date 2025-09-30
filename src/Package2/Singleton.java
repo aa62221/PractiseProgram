@@ -40,3 +40,6 @@ public  class Singleton {
 	
 }
  
+
+//"The Singleton pattern ensures only one instance of a class exists and provides a global access point. 
+// In my framework, I use it for WebDriver and configuration management to avoid multiple instances, save memory, and maintain consistency across tests."
