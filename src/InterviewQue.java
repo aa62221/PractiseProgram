@@ -20,6 +20,7 @@ public class InterviewQue {
 		findDate();
 		findPalandrome("abamk121plalp");
 		moveZeros();
+		EvenOddPartitionMaitainingOrder();
 	}
 	
 	//Sliding window approach
@@ -95,6 +96,9 @@ public class InterviewQue {
 //			
 //		}
 //		System.out.print(sb);
+     
+     //OR
+//        s.replaceAll("0", "");
 
      // Method to reverse only alphabetic characters in a string
      public static String reverseString(String str) {

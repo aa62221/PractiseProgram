@@ -32,7 +32,8 @@ public class FindMissingNumber {
 		 
 		int array[] = new int[n];		
 		for( int i=0; i<=n-1;i++) {
-			array[i]= scan.nextInt();								
+			array[i]= scan.nextInt();
+			
 		}
 		Arrays.sort(array);
 		

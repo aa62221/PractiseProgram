@@ -111,6 +111,18 @@ public class ReverseString {
 		for(String s2: lst) {
 			System.out.print(s2+ " ");
 		}
+		
+		//OR if you do not want to use inbuilt function
+//		String str = "My name is Rohit";
+//        String[] s = str.split(" ");
+//        String[] arr = new String[s.length];
+//        int index=0;
+//        for( int i=s.length-1;i>=0;i--){
+//            arr[index]=s[i];
+//            index++;
+//        }
+//          System.out.println(Arrays.toString(arr));
+	
 	    
 //--------------------------------------------------------------------
 		
