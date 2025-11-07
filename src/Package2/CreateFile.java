@@ -35,7 +35,6 @@ public class CreateFile{
 	     //setting file to read only mode.
 	     file.setReadOnly();
     	     	     
-	     
 	    try {
 	     //writing a file
 	     //user will get error "Access is denied" as it is in read only mode.

@@ -21,6 +21,7 @@ public class InterviewQue {
 		findPalandrome("abamk121plalp");
 		moveZeros();
 		EvenOddPartitionMaitainingOrder();
+		squareRoot();
 	}
 	
 	//Sliding window approach
@@ -285,5 +286,20 @@ public class InterviewQue {
       	 
       	 //Note:- You have to create new array "result" here , you can't do in same array like moveZeros()
       	 // Because array during first for loop array will change to 8,2,4,6,9,6,3,1,7 and you will loose 5 and 6 will appear twice.
+      	 
+      	 
+      	 //find the square root of a number without using sqrt function
+      	 
+			public static void squareRoot() {
+				int num = 16;
+				double sqrt = num / 2; // Initial guess
+				double temp;
+				do {
+					temp = sqrt;
+					sqrt = (temp + (num / temp)) / 2;
+				} while ((temp - sqrt) != 0);
+
+				System.out.println("Square root of " + num + " is: " + sqrt);
+			}
      
 }

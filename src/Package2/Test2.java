@@ -1,6 +1,6 @@
 package Package2;
 
-public class Test2 extends Class1 {
+public class Test2  {
 	
 public static void main(String[]args) {
 		

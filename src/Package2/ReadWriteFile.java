@@ -16,7 +16,7 @@ public class ReadWriteFile {
 		//Property file is used to save the data in key and value pair
 		//Reading the property file using File input stream
 		 Properties prop = new Properties();
-		 FileInputStream fis = new FileInputStream("C:\\Users\\Dell\\Desktop\\Study Material\\Eclipse workspace\\Practise Program\\src\\Package2\\Properties.properties");
+		 FileInputStream fis = new FileInputStream("C:\\Users\\Dell\\Desktop\\Study Material\\EclipseWorkspace\\PractiseProgram\\src\\Package2\\Properties.properties");
 		 prop.load(fis);
 		 System.out.println(prop.get("username"));
 		 System.out.println(prop.getProperty("password"));

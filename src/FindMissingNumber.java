@@ -41,7 +41,7 @@ public class FindMissingNumber {
         
         for(int i=0;i<array.length-1;i++) {
        	
-        	if(array[i+1]-array[i]==1) {
+        	if(array[i+1]-array[i]==1|array[i+1]-array[i]==0) {
         		System.out.println("no missing number");
         	}
         	else {
