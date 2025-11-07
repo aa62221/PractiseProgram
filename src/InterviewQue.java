@@ -136,7 +136,7 @@ public class InterviewQue {
              "192.168.1.2",
              "192.168.1.1",
              "192.168.1.3",
-             "192.168.1.1"
+             "192.168.1.2"
          };
          // Map to store the count of clicks for each user
          Map<String, Integer> userClickCount = new HashMap<>();
@@ -151,16 +151,18 @@ public class InterviewQue {
          }
          System.out.println(userClickCount);
          // Find the user with the maximum clicks
+         
          String maxUser = null;
-         int maxClicks = 0;
+         int maxClicks = Collections.max(userClickCount.values());
          for (Map.Entry<String, Integer> entry : userClickCount.entrySet()) {
-             if (entry.getValue() > maxClicks) {
+             if (entry.getValue() == maxClicks) {
                  maxUser = entry.getKey();
-                 maxClicks = entry.getValue();
+//               maxClicks = entry.getValue();
+                 System.out.println("User with maximum clicks: " + maxUser + " (" + maxClicks + " clicks)");
              }
          }
-         // Output the result
-         System.out.println("User with maximum clicks: " + maxUser + " (" + maxClicks + " clicks)");
+//         Output the result
+//         System.out.println("User with maximum clicks: " + maxUser + " (" + maxClicks + " clicks)");
      
      }
      
